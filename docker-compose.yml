@@ -1,20 +1,7 @@
-version: '3.1'
+version: '3.3'
 
 services:
-
-  wordpress:
-    image: wordpress
-    restart: always
-    ports:
-      - 8080:80
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: atharva
-      WORDPRESS_DB_PASSWORD: atharva
-      WORDPRESS_DB_NAME: db
-    volumes:
-      - wordpress:/var/www/html
-
+ 
   db:
     image: mysql:5.7
     restart: always
@@ -24,8 +11,22 @@ services:
       MYSQL_PASSWORD: atharva
       MYSQL_ROOT_PASSWORD: toor 
     volumes:
-      - db:/var/lib/mysql
+      - db_storage_new:/var/lib/mysql
+  wp:
+    image: wordpress:5.1.1-php7.3-apache
+    restart: mysql:5.7
+    depends_on: 
+      - db
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: 
+      WORDPRESS_DB_USER: atharva
+      WORDPRESS_DB_PASSWORD: atharva
+      WORDPRESS_DB_NAME: db
+    volumes:
+      - wp_storage_new:/var/www/html
 
 volumes:
-  wordpress:wordpress_storage
-  db: mysql_storage
+  wp_storage_new:
+  db_mysql_storage:
