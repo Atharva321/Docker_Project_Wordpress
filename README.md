@@ -30,6 +30,7 @@ This is a docker project done under the guidance of Vimal Daga sir.
    ```
  * After this run: 
    > yum repolist
+   /
   you will see the dvd 1 and 2 are loaded.
 - Congiguration of yum for docker 
 * Now create docker repo and configure it.
