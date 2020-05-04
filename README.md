@@ -59,7 +59,7 @@ This is a docker project done under the guidance of Vimal Daga sir.
     > https://docs.docker.com/compose/install
 
     
-   - Run this command to download the current stable release of Docker Compose:
+   - Run this command to download the current stable release of Docker Compose.
 
     > sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o      /usr/local/bin/docker-compose
  To install a different version of Compose, substitute 1.25.5 with the version of Compose you want to use.\
