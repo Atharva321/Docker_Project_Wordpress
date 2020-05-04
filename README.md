@@ -36,10 +36,11 @@ This is a docker project done under the guidance of Vimal Daga sir.
  * Now create docker repo and configure it.
     > gedit /etc/yum.repos.d/docker.repo
  * Type following command in docker.repo:
-     > [docker]
-     > baseurl = https://download.docker.com/linux/centos/7/x86_64/stable/
-     > gpgcheck = 0
-    
+    ```
+     [docker]
+     baseurl = https://download.docker.com/linux/centos/7/x86_64/stable/
+     gpgcheck = 0
+    ```
   * After saving it then run yum repolist command again and you willl see docker repo is loaded.
   * Now install docker Finally:
     > yum install docker-ce --no-best
