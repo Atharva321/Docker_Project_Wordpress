@@ -2,32 +2,36 @@
 This is a docker project done under the guidance of Vimal Daga sir.
 
 ### Requirements: 
-docker
-wordpress:5.1.1-php7.3-apache
-mysql:5.7
+- docker
+- wordpress:5.1.1-php7.3-apache
+- mysql:5.7
 
 
 ### Installation of Docker
 **Login as root to configure**
-Configuration of yum:
+- Configuration of yum:
 
-* To install docker first we have to configure **if it is not configured**.
-* First we have to go to yum.repos.d:
-   > gedit /etc/yum.repos.d/root.repo
+ * To install docker first we have to configure **if it is not configured**.
+ * First we have to go to yum.repos.d:
+   ```
+    gedit /etc/yum.repos.d/root.repo
+   ```
+ 
 * then type the following commands in root.repo:
-   > [dvd1]
-   > baseurl = file:///run/media/root/RHEL-8-0-0-BaseOS-x86_64/AppStream
-   > gpgcheck = 0
+   ```
+   [dvd1]
+   baseurl = file:///run/media/root/RHEL-8-0-0-BaseOS-x86_64/AppStream
+   gpgcheck = 0
    
 
-   > [dvd2]
-   > baseurl = file:///run/media/root/RHEL-8-0-0-BaseOS-x86_64/AppStream
-   > gpgcheck = 0
-
+   [dvd2]
+   baseurl = file:///run/media/root/RHEL-8-0-0-BaseOS-x86_64/AppStream
+   gpgcheck = 0
+   ```
 * After this run: 
    > yum repolist
   you will see the dvd 1 and 2 are loaded.
-
+- Congiguration of yum for docker
 * Now create docker repo and configure it.
   > gedit /etc/yum.repos.d/docker.repo
 * Type following command in docker.repo:
