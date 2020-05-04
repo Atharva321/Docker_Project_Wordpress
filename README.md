@@ -54,32 +54,34 @@ This is a docker project done under the guidance of Vimal Daga sir.
 
 ### Installing Docker-Compose:
 
- **Installation docs : **
+ ***Installation docs :***
    
-    > https://docs.docker.com/compose/install/
-    
-  * Run this command to download the current stable release of Docker Compose:
+    > https://docs.docker.com/compose/install
 
-    ``` sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o    /usr/local/bin/docker-compose ```\
+    
+   - Run this command to download the current stable release of Docker Compose:
+
+    ``` sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o    /usr/local/bin/docker-compose 
+    ```
  To install a different version of Compose, substitute 1.25.5 with the version of Compose you want to use.\
    
  If you have problems installing with curl, see Alternative Install Options tab above.\
    
-  * Apply executable permissions to the binary:
+   - Apply executable permissions to the binary:
 
   ``` sudo chmod +x /usr/local/bin/docker-compose```
-  Note: If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any   other directory in your path.
+   Note: If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any    other directory in your path.
 
-  * Test the installation.
+   - Test the installation.
 
    > $ docker-compose --version
    > docker-compose version 1.25.5, build 1110ad01 
 
 ### Running Docker Compose:
-  *  Go to the directory where is your docker compose yml file availabel.
-  *  And run the following command:
+  -  Go to the directory where is your docker compose yml file availabel.
+  -  And run the following command:
       > docker-compose up
-  * Now the images will be pulled if they are notavailabel.
-  * Now go to port where PAT is set of you wordpress you will able to access the wordpress site.
-  * to stop docker compose run:
+  - Now the images will be pulled if they are notavailabel.
+  - Now go to port where PAT is set of you wordpress you will able to access the wordpress site.
+  - to stop docker compose run:
     > docker compose down
