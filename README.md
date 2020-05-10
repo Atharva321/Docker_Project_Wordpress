@@ -62,9 +62,10 @@ This is a docker project done under the guidance of Vimal Daga sir.
  docker pull wordpress:5.1.1-php7.3-apache mysql:5.7 drupal postgres joomla grafana/grafana prometheus
  ```
  Now to install mysql and postgresql typew following command:
- > yum install mysql
- > yum install postgresql
-
+ ```
+ yum install mysql
+ yum install postgresql
+ ```
 ### Installing Docker-Compose:
 
  ***Installation docs :***
