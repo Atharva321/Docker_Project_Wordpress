@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  
+  mysql1:
+    image: mysql:5.7
+    volumes:
+      - mysql_storage1:/var/lib/mysql
+    ports:
+      - 3306:3306
+    restart: always
+    environment: 
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_USER: aba
+      MYSQL_PASSWORD: redhat
+      MYSQL_DATABASE: joomla_db
+    
+    #networks
+      #- joom_net   
+  joom_os:
+    image: joomla
+    volumes:
+      - joomla_storage1:/var/www/html
+    ports:
+      - 4040:80
+    restart: always 
+    environment:
+      JOOMLA_DB_HOST: mysql1:3306
+      JOOMLA_DB_USER: aba
+
+      JOOMLA_DB_PASSWORD: redhat
+      JOOMLA_DB_NAME: joomla_db
+    #networks
+      #- joom_net 
+    links:
+      - mysql1:mysql 
+volumes:
+  mysql_storage1:
+  joomla_storage1:
+  #networks
+    #joom_net
+      #driver bridge
