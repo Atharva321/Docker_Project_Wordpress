@@ -85,6 +85,7 @@ This is a docker project done under the guidance of Vimal Daga sir.
      ```
      sudo chmod +x /usr/local/bin/docker-compose
      ```
+   
    Note: If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any    other directory in your path.
 
    - Test the installation.
