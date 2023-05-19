@@ -97,7 +97,8 @@ This is a docker project done under the guidance of Vimal Daga sir.
   -  Go to the directory where is your docker compose yml file availabel.
   -  And run the following command:
       > docker-compose up
-  - Now the images will be pulled if they are notavailabel.
+  - Now the images will be pulled if they are not availabel.
   - Now go to port where PAT is set of you wordpress you will able to access the wordpress site.
+  - Similarly for Drupal.()
   - to stop docker compose run:
     > docker compose down
