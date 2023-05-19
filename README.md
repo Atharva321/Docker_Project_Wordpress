@@ -99,6 +99,6 @@ This is a docker project done under the guidance of Vimal Daga sir.
       > docker-compose up
   - Now the images will be pulled if they are not availabel.
   - Now go to port where PAT is set of you wordpress you will able to access the wordpress site.
-  - Similarly for Drupal.()
+  - Similarly for [Drupal](https://github.com/Atharva321/Docker_Project_Wordpress/blob/master/drupal_i_1.PNG)
   - to stop docker compose run:
     > docker compose down
